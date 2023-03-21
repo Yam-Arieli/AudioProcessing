@@ -119,7 +119,7 @@ def predict_freqs_and_magnitudes(magnitude_spectrum: np.array, freqs: np.array):
     
     return np.array(predicted_freqs), np.array(predicted_mag)
 
-def predict_wave_freqs_magnitudes(sound_array: np.array, sr: int, duration: float):
+def predict_wave_freqs_magnitudes(sound_array: np.array, sr: int, duration: float, N: int):
     sound_array_fft = np.fft.fft(sound_array)
     magnitude_spectrum = np.abs(sound_array_fft)
     freqs = np.linspace(0, sr, len(magnitude_spectrum))
