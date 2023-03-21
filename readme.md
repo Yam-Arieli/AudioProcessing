@@ -5,25 +5,7 @@
 > <img alt="Qries" src="images/graph example for readme.png"><br>
 <!-- -->
 > And also mathematics basics
-> $$
-> \begin{pmatrix}
->     \begin{bmatrix} 1 & x_{1,1} & ... & x_{1,k} \end{bmatrix} \\
->     ⋮ \\
->     ⋮ \\
->     \begin{bmatrix} 1 & x_{N,1} & ... & x_{N,k} \end{bmatrix}
-> \end{pmatrix}
-> \begin{bmatrix}
->     1 \\
->     amp_1 \\ 
->     ⋮ \\
->     amp_k
-> \end{bmatrix}=
-> \begin{bmatrix} y_1 \\
->     ⋮ \\
->     ⋮ \\
->     y_N
-> \end{bmatrix}
-> $$
+> <div align="center"><img style="background: white;" src="svg\math example.svg"></div>
 <!-- -->
 
 > ### NOTE: <br> This project currently contains only its 1'st tutorial.<br> more will be added in the future.

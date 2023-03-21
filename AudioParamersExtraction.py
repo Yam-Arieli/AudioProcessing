@@ -1,10 +1,6 @@
 import numpy as np
 from scipy.optimize import curve_fit
-from scipy.fft import fft, ifft, fftfreq
-from scipy.io import wavfile
-from functools import reduce
 import librosa
-from IPython.display import Audio, display
 import sounddevice as sd
 from matplotlib import pyplot as plt
 
