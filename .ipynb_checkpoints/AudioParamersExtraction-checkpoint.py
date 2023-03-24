@@ -109,7 +109,7 @@ def predict_freqs_and_magnitudes(magnitude_spectrum: np.array, freqs: np.array):
 
     for f, m, lm, nm, real_m in zip(freqs, magnitude_spectrum_normalized,
                                     last_mag, next_mag, magnitude_spectrum):
-        if m > 0.05 and lm < m and nm < m:
+        if m > 0.2 and lm < m and nm < m:
             predicted_freqs.append(f)
             predicted_mag.append(real_m)
     
@@ -133,10 +133,8 @@ def predict_wave_freqs_magnitudes(sound_array: np.array, sr: int, duration: floa
     X = X.transpose()
     p0 = np.array(predicted_mag)
     
-    if p0.shape[0]:
-        popt, pcov = curve_fit(calculate_wave, X, sound_array, p0)
-        sound_array_pred = X.dot(popt)
-        
-        return sound_array_pred, predicted_freqs, predicted_mag
-    else:
-        return sound_array, predicted_freqs, predicted_mag
+    popt, pcov = curve_fit(calculate_wave, X, sound_array, p0)
+
+    sound_array_pred = X.dot(popt)
+    
+    return sound_array_pred, predicted_freqs, predicted_mag
